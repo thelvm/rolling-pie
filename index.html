@@ -4,173 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Rolling Pie</title>
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Andika&family=Cambay&family=Hind+Madurai&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Andika&family=Cambay&family=Hind+Madurai&family=Rubik&display=swap"
           rel="stylesheet">
+    <!-- Mapbox -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a><h1>The Rolling Pie</h1></a>
-            </li>
-            <li>
-                <a href="#menu-section">Menu</a>
-            </li>
-            <li>
-                <a href="#about-us-section">About us</a>
-            </li>
-            <li>
-                <a href="#book-us-section">Book us</a>
-                <ul>
-                    <li>
-                        <a href="#single-day-book-section">Single Day</a>
-                    </li>
-                    <li>
-                        <a href="#multi-day-book-section">Multi-day event</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#find-us-section">Find us</a>
-            </li>
-            <li>
-                <a href="#news-section">News</a>
-                <ul>
-                    <li>
-                        <a href="#blog-section">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#in-the-news-section">In the News</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</header>
+<div id="main-border-top"></div>
+<div id="main-border-right"></div>
+<div id="main-border-bottom"></div>
+<div id="main-border-left"></div>
 
-<main>
+<div id="main-container">
+    <header>
+        <nav>
+            <ul class="alternating-colors">
+                <li>
+                    <a>
+                        <span>R</span><span>o</span><span>l</span><span>l</span><span>i</span><span>n</span><span>g</span>
+                        <span>P</span><span>i</span><span>e</span></a>
+                </li>
 
-    <section id="about-us-section">
-        <div class="section-content">
-            <h2>About us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut, consequatur doloribus excepturi
-                labore laudantium, nihil porro praesentium quae quidem reiciendis ullam, voluptas. Delectus esse, est
-                laborum nobis quisquam veritatis!</p>
-        </div>
-    </section>
+                <span><li>
+                                    <a href="#menu-section">Menu</a>
+                                </li></span>
+                <span><li>
+                                    <a href="#about-us-section">About us</a>
+                                </li></span>
+                <span><li>
+                                    <a href="#book-us-section">Book us</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#single-day-book-section">Single Day</a>
+                                        </li>
+                                        <li>
+                                            <a href="#multi-day-book-section">Multi-day event</a>
+                                        </li>
+                                    </ul>
+                                </li></span>
+                <span><li>
+                                    <a href="#find-us-section">Find us</a>
+                                </li></span>
+                <span><li>
+                                    <a href="#news-section">News</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#blog-section">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="#in-the-news-section">In the News</a>
+                                        </li>
+                                    </ul>
+                                </li></span>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="menu-section">
-        <div class="section-content">
-            <h2>Menu</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cum debitis distinctio ducimus eius et
-                harum ipsum iusto magni non nulla qui ratione recusandae, rerum tempora tempore tenetur. Dolorum,
-                nihil!</p>
-            <div class="menu-items">
-                <div class="pie">
-                    <h3 class="pie-name">Apple Pie</h3>
-                    <div class="pie-details">
-                        <img class="pie-image" src="img/apple-pie-cropped.webp"
-                             alt="Apple Pie image">
-                        <div class="pie-description">
-                            <p>It's a pie with apples. A variety of spices is added for your pleasure.</p>
+    <main>
+
+        <section id="about-us-section">
+            <div class="section-content">
+                <h2>About us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut, consequatur doloribus
+                    excepturi
+                    labore laudantium, nihil porro praesentium quae quidem reiciendis ullam, voluptas. Delectus esse,
+                    est
+                    laborum nobis quisquam veritatis!</p>
+            </div>
+        </section>
+
+        <section id="menu-section">
+            <div class="section-content">
+                <h2>Menu</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cum debitis distinctio ducimus eius
+                    et
+                    harum ipsum iusto magni non nulla qui ratione recusandae, rerum tempora tempore tenetur. Dolorum,
+                    nihil!</p>
+                <div class="menu-items">
+                    <div class="pie">
+                        <h3 class="pie-name">Apple Pie</h3>
+                        <div class="pie-details">
+                            <img class="pie-image" src="img/apple-pie-cropped.webp"
+                                 alt="Apple Pie image">
+                            <div class="pie-description">
+                                <p>It's a pie with apples. A variety of spices is added for your pleasure.</p>
+                            </div>
+                            <div class="pie-price"></div>
                         </div>
-                        <div class="pie-price"></div>
                     </div>
-                </div>
-                <div class="pie">
-                    <h3 class="pie-name">Blueberry Pie</h3>
-                    <div class="pie-details">
-                        <img class="pie-image" src="img/blueberry-pie-cropped.webp" alt="Blueberry Pie image">
-                        <div class="pie-description">
-                            <p>Blueberry on a cream pie. Sweet without being overwhelming.</p>
+                    <div class="pie">
+                        <h3 class="pie-name">Blueberry Pie</h3>
+                        <div class="pie-details">
+                            <img class="pie-image" src="img/blueberry-pie-cropped.webp" alt="Blueberry Pie image">
+                            <div class="pie-description">
+                                <p>Blueberry on a cream pie. Sweet without being overwhelming.</p>
+                            </div>
+                            <div class="pie-price"></div>
                         </div>
-                        <div class="pie-price"></div>
                     </div>
-                </div>
-                <div class="pie">
-                    <h3 class="pie-name">Grape pie</h3>
-                    <div class="pie-details">
-                        <img class="pie-image" src="img/grape-pie-cropped.webp" alt="Grape Pie image">
-                        <div class="pie-description">
-                            <p>Grapes, in a pie! It's grape juice you can bite.</p>
+                    <div class="pie">
+                        <h3 class="pie-name">Grape pie</h3>
+                        <div class="pie-details">
+                            <img class="pie-image" src="img/grape-pie-cropped.webp" alt="Grape Pie image">
+                            <div class="pie-description">
+                                <p>Grapes, in a pie! It's grape juice you can bite.</p>
+                            </div>
+                            <div class="pie-price"></div>
                         </div>
-                        <div class="pie-price"></div>
                     </div>
-                </div>
-                <div class="pie">
-                    <h3 class="pie-name">Veggie Pie</h3>
-                    <div class="pie-details"><img class="pie-image" src="img/legume-pie-cropped.webp"
-                                                  alt="Veggie Pie image">
-                        <div class="pie-description">
-                            <p>Vegetables that tastes good. A pie never looked so colorful</p>
+                    <div class="pie">
+                        <h3 class="pie-name">Veggie Pie</h3>
+                        <div class="pie-details"><img class="pie-image" src="img/legume-pie-cropped.webp"
+                                                      alt="Veggie Pie image">
+                            <div class="pie-description">
+                                <p>Vegetables that tastes good. A pie never looked so colorful</p>
+                            </div>
+                            <div class="pie-price"></div>
                         </div>
-                        <div class="pie-price"></div>
                     </div>
-                </div>
-                <div class="pie">
-                    <h3 class="pie-name">Nuts Pie</h3>
-                    <div class="pie-details">
-                        <img class="pie-image" src="img/nut-pie-cropped.webp" alt="Nuts Pie image">
-                        <div class="pie-description">
-                            <p>All the nuts! Nutty aftertaste and a crunchy feel.</p>
+                    <div class="pie">
+                        <h3 class="pie-name">Nuts Pie</h3>
+                        <div class="pie-details">
+                            <img class="pie-image" src="img/nut-pie-cropped.webp" alt="Nuts Pie image">
+                            <div class="pie-description">
+                                <p>All the nuts! Nutty aftertaste and a crunchy feel.</p>
+                            </div>
+                            <div class="pie-price"></div>
                         </div>
-                        <div class="pie-price"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="book-us-section">
-        <h2>Book us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ea excepturi necessitatibus numquam odio
-            provident sunt ullam voluptatibus. At aut deserunt dolor est perferendis quod repudiandae rerum sit
-            temporibus velit.</p>
-        <section id="single-day-book-section">
-            <h3>Single day</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi delectus deleniti et, fugiat iure
-                maxime nemo neque odio quisquam quo quod repellat, sequi ullam unde vero? Quaerat quibusdam reiciendis
-                velit.</p>
         </section>
-        <section id="multi-day-book-section">
-            <h3>Multi-day event</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa deleniti et eveniet facilis fuga
-                illo impedit itaque laborum nulla numquam odit omnis quod recusandae, reiciendis vitae voluptatum. Fuga,
-                officiis.</p>
-        </section>
-    </section>
 
-    <section id="find-us-section">
-        <div class="section-content">
-            <h2>Find us</h2>
-        </div>
-    </section>
-
-    <section id="news-section">
-        <h2>News</h2>
-        <section id="blog-section">
-            <h3>Blog</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea ex neque quaerat totam, voluptate.
-                Accusamus commodi fugiat laboriosam magnam quaerat, reprehenderit saepe soluta voluptatum! Dicta dolores
-                laudantium molestias nostrum?</p>
+        <section id="book-us-section">
+            <div class="section-content">
+                <h2>Book us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ea excepturi necessitatibus
+                    numquam odio provident sunt ullam voluptatibus. At aut deserunt dolor est perferendis quod
+                    repudiandae rerum sit
+                    temporibus velit.</p>
+                <section id="single-day-book-section">
+                    <h3>Single day</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi delectus deleniti et, fugiat
+                        iure maxime nemo neque odio quisquam quo quod repellat, sequi ullam unde vero? Quaerat quibusdam
+                        reiciendis
+                        velit.</p>
+                </section>
+                <section id="multi-day-book-section">
+                    <h3>Multi-day event</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa deleniti et eveniet
+                        facilis
+                        fuga
+                        illo impedit itaque laborum nulla numquam odit omnis quod recusandae, reiciendis vitae
+                        voluptatum.
+                        Fuga,
+                        officiis.</p>
+                </section>
+            </div>
         </section>
-        <section id="in-the-news-section">
-            <h3>In the news</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab corporis cum delectus doloremque expedita
-                facilis iure minus nam nihil nisi pariatur quo, quod repellendus saepe sequi unde veniam voluptas
-                voluptatum.</p>
-        </section>
-    </section>
-</main>
 
-<div id="test-circle">A test link</div>
+        <section id="find-us-section">
+            <div class="section-content">
+                <h2>Find us</h2>
+                <div id='map' style='width: 100%; height: 40rem;'></div>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoidGhlbHZtIiwiYSI6ImNrd3VoazRtYTB4bnUycm1oeDhzZXd4MDkifQ.j0midDoLeWVJGFWUgSPtTQ';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/thelvm/ckwuieg0w1vg114n2xdczpsk3',
+                        interactive: false
+                    });
+                </script>
+            </div>
+        </section>
+
+        <section id="news-section">
+            <div class="section-content">
+                <h2>News</h2>
+                <section id="blog-section">
+                    <h3>Blog</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea ex neque quaerat totam,
+                        voluptate.
+                        Accusamus commodi fugiat laboriosam magnam quaerat, reprehenderit saepe soluta voluptatum! Dicta
+                        dolores
+                        laudantium molestias nostrum?</p>
+                </section>
+                <section id="in-the-news-section">
+                    <h3>In the news</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab corporis cum delectus doloremque
+                        expedita
+                        facilis iure minus nam nihil nisi pariatur quo, quod repellendus saepe sequi unde veniam
+                        voluptas
+                        voluptatum.</p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+</div>
 
 </body>
 </html>
